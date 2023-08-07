@@ -43,7 +43,8 @@
     "lint": "eslint --max-warnings 0 --cache",
     "lint:fix": "eslint --max-warnings 0 --fix --cache",
     "lint:types": "tsc --noEmit",
-    "format": "prettier --ignore-unknown --write **/*.{ts,json}"
+    "format": "prettier --ignore-unknown --write **/*.{ts,json}",
+    "play": "tsx watch ./playground.ts"
   },
   "keywords": [],
   "author": "",
@@ -56,6 +57,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "prettier": "^3.0.1",
     "tsup": "^7.2.0",
+    "tsx": "^3.12.7",
     "typescript": "^5.1.6",
     "vitest": "^0.34.1"
   }

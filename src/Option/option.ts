@@ -2,7 +2,7 @@ import { Kind, KindSymbol } from "../kind";
 
 type OptionEnum<T> = Kind<"Some", { value: T }> | Kind<"None">;
 
-class OptionImpl<T> {
+export class OptionImpl<T> {
   public constructor(private readonly kind: OptionEnum<T>) {}
 
   public unwrap(): T {

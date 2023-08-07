@@ -2,7 +2,7 @@ import { Kind, KindSymbol } from "../kind";
 
 type ResultEnum<T, E> = Kind<"Ok", { value: T }> | Kind<"Err", { error: E }>;
 
-class ResultImpl<T, E> {
+export class ResultImpl<T, E> {
   public constructor(private kind: ResultEnum<T, E>) {}
 
   public unwrap(): T {

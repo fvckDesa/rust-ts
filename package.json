@@ -2,7 +2,41 @@
   "name": "rust-ts",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./build/index.js",
+        "types": "./build/index.d.ts"
+      },
+      "require": {
+        "default": "./build/index.cjs",
+        "types": "./build/index.d.cts"
+      }
+    },
+    "./option": {
+      "import": {
+        "default": "./build/option/index.js",
+        "types": "./build/option/index.d.ts"
+      },
+      "require": {
+        "default": "./build/option/index.cjs",
+        "types": "./build/option/index.d.cts"
+      }
+    },
+    "./result": {
+      "import": {
+        "default": "./build/result/index.js",
+        "types": "./build/result/index.d.ts"
+      },
+      "require": {
+        "default": "./build/result/index.cjs",
+        "types": "./build/result/index.d.cts"
+      }
+    }
+  },
+  "type": "module",
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
